@@ -1,0 +1,10 @@
+#Ignor next
+.next
+/.next
+
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+**/*.html

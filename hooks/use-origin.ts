@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+
+// hook to know the origin of the URL
 
 export const useOrigin = () => {
   const [mounted, setMounted] = useState(false);
@@ -7,11 +9,14 @@ export const useOrigin = () => {
     setMounted(true);
   }, []);
 
-  const origin = typeof window !== "undefined" && window.location.origin ? window.location.origin : "";
+  const origin =
+    typeof window !== "undefined" && window.location.origin
+      ? window.location.origin
+      : "";
 
   if (!mounted) {
     return "";
   }
 
   return origin;
-}
+};
